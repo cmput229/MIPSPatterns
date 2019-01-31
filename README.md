@@ -20,7 +20,8 @@ simplified files assume you already know why something might be done in a
 certain way.
 
 The content is divided up as follows:
-  1. Syntax and Structure: Discusses how a MIPS assembly file is structured.
+  1. [Syntax and Structure](explained/01-SyntaxAndStructure): Discusses how a
+    MIPS assembly file is structured.
     <ol type="a">
       <li>
         Labels and Sections: Introduces data/text section and labels within
@@ -30,8 +31,8 @@ The content is divided up as follows:
         Data Section: Introduces common data section directives.
       </li>
     </ol>
-  1. Subroutines: Discusses how to interact with _basic_ subroutines (leaf
-    functions).
+  1. [Subroutines](explained/02-Subroutines): Discusses how to interact with
+    _basic_ subroutines (leaf functions).
     <ol type="a">
       <li>
         Subroutines: Introduces basic leaf functions. More advanced functions
@@ -41,7 +42,7 @@ The content is divided up as follows:
         Main: Introduces what main should look like.
       </li>
     </ol>
-  1. Conditionals: Discusses how to form basic conditional statements.
+  1. [Conditionals](explained/03-Conditionals): Discusses how to form basic conditional statements.
     <ol type="a">
       <li>
         If: Introduces a basic if conditional.
@@ -58,7 +59,7 @@ The content is divided up as follows:
         some may prefer.
       </li>
     </ol>
-  1. Loops: Discusses how to form basic loop statements.
+  1. [Loops](explained/04-Loops): Discusses how to form basic loop statements.
     <ol type="a">
       <li>
         Precondition Loop: Introduces loops with a condition check before the
@@ -69,7 +70,8 @@ The content is divided up as follows:
         condition check after the body.
       </li>
     </ol>
-  1. Complex Conditions: Discusses how to form composite conditions.
+  1. [Complex Conditions](explained/05-ComplexConditions): Discusses how to form
+    composite conditions.
     <ol type="a">
       <li>
         And: Introduces a two-part condition joined by an and.
@@ -78,14 +80,13 @@ The content is divided up as follows:
         Or: Introduces a two-part condition joined by an or.
       </li>
     </ol>
-  1. <a name="stack"/> Stack: Discusses how to interact with the stack.
+  1. <a name="stack"/> [Stack](explained/06-Stack): Discusses how to interact with the stack.
     <ol type="a">
       <li>
         Single Stack Unwind: Discusses how to simplify your code with a single
         exit point.
       </li>
     </ol>
-
 
 # Contributors
  * Braedy Kuzma
