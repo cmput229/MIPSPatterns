@@ -19,13 +19,16 @@ exampleLabel2: .space 1
 
 # Label with first instruction on next line.
 foo:
-  jr    $ra # Foo starts here.
+  add   $t0, $zero, $zero         # Foo starts here.
+  jr    $ra                       # Foo ends here.
 
 # Label with first instruction on same line.
-bar: jr    $ra # Bar starts here.
+bar:  add   $t0, $zero, $zero     # Bar starts here.
+      jr    $ra                   # Bar ends here.
 
 # Label with first instruction later.
 baz:
 
 
-  jr    $ra # Baz starts here.
+  add   $t0, $zero, $zero         # Baz starts here.
+  jr    $ra                       # Baz ends here.
