@@ -1,3 +1,8 @@
+#------------------------------
+# Common MIPS Patterns - If/Elif/Else
+# Author: Braedy Kuzma
+# Date:January 31, 2019
+#------------------------------
 .text
 
 # A function with an if/elif/else condition in it.

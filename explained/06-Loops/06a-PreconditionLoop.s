@@ -1,3 +1,8 @@
+#------------------------------
+# Common MIPS Patterns - Precondition Loop
+# Author: Braedy Kuzma
+# Date:January 31, 2019
+#------------------------------
 .text
 
 # A function with a preconditioned loop in it.

@@ -1,3 +1,9 @@
+#------------------------------
+# Common MIPS Patterns - Data Section
+# Author: Braedy Kuzma
+# Date:January 31, 2019
+#------------------------------
+
 # The data section is used to allocate static space for variables. Here's a few
 # you might care about.
 

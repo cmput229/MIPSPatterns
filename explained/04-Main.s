@@ -1,3 +1,9 @@
+#------------------------------
+# Common MIPS Patterns - Main
+# Author: Braedy Kuzma
+# Date:January 31, 2019
+#------------------------------
+
 # If you are creating a program, not just a function, then you need what is
 # called a program entry point. In C we call this main: in MIPS it is the same.
 

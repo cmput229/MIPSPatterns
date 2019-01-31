@@ -1,3 +1,9 @@
+#------------------------------
+# Common MIPS Patterns - Labels and Sections
+# Author: Braedy Kuzma
+# Date:January 31, 2019
+#------------------------------
+
 # Data section.
 .data
 

@@ -1,3 +1,11 @@
+#------------------------------
+# Common MIPS Patterns - Single Stack Unwind
+# Author: Braedy Kuzma
+# Date:January 31, 2019
+#------------------------------
+.text
+
+# A function with multiple return values but one exit point.
 f1:
   # Wind the stack.
   addi  $sp, $sp, -20             # Grow stack by five words.

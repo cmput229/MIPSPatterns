@@ -1,3 +1,8 @@
+#------------------------------
+# Common MIPS Patterns - If
+# Author: Braedy Kuzma
+# Date:January 31, 2019
+#------------------------------
 .text
 
 # A function with a conditional in it.
