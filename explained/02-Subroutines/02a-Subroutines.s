@@ -9,8 +9,13 @@
 # typically end with a jump register (jr) instruction using the return address
 # register ($ra).
 
-# A funcion foo. Note that this is still just a regular label, we just choose to
-# think of it as a subroutine.
+# A subroutine may be called a "leaf function" when it does not call any other
+# functions. If you think of the paths of your program as a tree, with function
+# calls being branches, then a subroutine that calls nothing else is the end
+# of a path, or a leaf.
+
+# A function foo. Note that this is still just a regular label, we just choose
+# to think of it as a subroutine.
 foo:
 
   # Function code. Stack wind, function work, other procedure calls, stack
