@@ -29,7 +29,7 @@ f2:
   # want to quit if this condition is met). THIS IS SECTION 2.
   # It is important that this is BEFORE the loop begin label. It is NOT executed
   # every loop. It only guards the first iteration.
-  bge     $t0, $t1, _f2Join
+  bge   $t0, $t1, _f2Join
 
 _f2LoopBegin:
 
@@ -40,7 +40,7 @@ _f2LoopBegin:
 
   # Now do our increment step. THIS IS SECTION 3.
   # The same note as above about while loops applies here too.
-  addi    $t0, $t0, 1
+  addi  $t0, $t0, 1
 
 
   # Now check our condition. This is the POSTCONDITION. It will almost certainly
@@ -53,11 +53,11 @@ _f2LoopBegin:
   # We want to keep doing the loop while the counter is less than 10. Therefore
   # we want to BRANCH while #t0 is LESS THAN $t1 (blt). Note that blt is the
   # negation of bge.
-  blt     $t0, $t1, _f2LoopBegin
+  blt   $t0, $t1, _f2LoopBegin
 
 _f2Join:
   # Code after the loop.
   # ...
 
   # Return.
-   jr $ra
+  jr    $ra

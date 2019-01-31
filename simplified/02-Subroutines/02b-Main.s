@@ -9,5 +9,5 @@
 main:
   # Body code...
 
-  li    $v0, 0                    # Return 0.
+  li    $v0, 0                    # Ready to return 0.
   jr    $ra                       # Return.

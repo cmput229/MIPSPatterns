@@ -56,15 +56,15 @@ _f1LoopBegin:
   # Note that the "increment step" is something that for loops do, not while
   # loops. If you're modeling a while loop then the "increment" is probably
   # just a part of your loop body.
-  addi    $t0, $t0, 1
+  addi  $t0, $t0, 1
 
   # We've finished this iteration so we need to start the iteration over again.
   # This means unconditionally jumping back to checking our condition.
-  j       _f1LoopBegin
+  j     _f1LoopBegin
 
 _f1Join:
   # Code after the loop.
   # ...
 
   # Return.
-  jr $ra
+  jr    $ra

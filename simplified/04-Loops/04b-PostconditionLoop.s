@@ -17,7 +17,7 @@ f2:
   li    $t1, 10                   # Set max to 10.
 
   # Loop guard.
-  bge     $t0, $t1, _f2Join       # Branch to join on fail.
+  bge   $t0, $t1, _f2Join         # Branch to join on fail.
 
 _f2LoopBegin:
   # Do your loop work here.
@@ -33,5 +33,4 @@ _f2Join:
   # Code after the loop.
   # ...
 
-  # Return.
-   jr $ra
+   jr   $ra                       # Return.

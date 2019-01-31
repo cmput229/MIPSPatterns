@@ -11,4 +11,4 @@ foo:
 # A label within foo. Consider your internal naming style.
 _fooLabelName:
 
-  jr $ra                          # Return.
+  jr    $ra                       # Return.

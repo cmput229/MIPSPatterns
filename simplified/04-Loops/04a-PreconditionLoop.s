@@ -24,14 +24,14 @@ _f1LoopBegin:
   # ...
 
   # Increment.
-  addi    $t0, $t0, 1             # Increment counter by 1.
+  addi  $t0, $t0, 1               # Increment counter by 1.
 
   # Restart loop.
-  j       _f1LoopBegin            # Jump to condition.
+  j     _f1LoopBegin              # Jump to condition.
 
 _f1Join:
   # Code after the loop.
   # ...
 
   # Return.
-  jr $ra
+  jr    $ra

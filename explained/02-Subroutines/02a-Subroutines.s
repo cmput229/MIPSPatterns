@@ -29,4 +29,4 @@ _fooLabelName:
 
   # The return instruction. It's often a good idea to have only one exit or as
   # few as possible so that you only need to manage a few exit points.
-  jr $ra
+  jr    $ra
