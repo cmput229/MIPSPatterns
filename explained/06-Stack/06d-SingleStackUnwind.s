@@ -7,13 +7,13 @@
 
 # A function with multiple return values but one exit point.
 f1:
-  # Example stack winding.
-  addi  $sp, $sp, -20
-  sw    $ra, 0($sp)
-  sw    $s0, 4($sp)
-  sw    $s1, 8($sp)
-  sw    $s2, 12($sp)
-  sw    $s3, 16($sp)
+  # Function prologue, set up stack and save registers.
+  addi  $sp, $sp, -20             # Allocate five slots on stack.
+  sw    $ra, 0($sp)               # $ra is in the first slot.
+  sw    $s0, 4($sp)               # $s0 is in the second slot.
+  sw    $s1, 8($sp)               # $s1 is in the third slot.
+  sw    $s2, 12($sp)              # $s2 is in the fourth slot.
+  sw    $s3, 16($sp)              # $s3 is in the fifth slot.
 
   # Sometimes we want to have functions that return early. Maybe we have
   # something like:
@@ -57,13 +57,13 @@ _unwind:
   # Any code here is ONLY for cleaning up the stack since we don't want to
   # disturb any registers.
 
-  # Example stack unwinding.
-  lw    $s3, 16($sp)
-  lw    $s2, 12($sp)
-  lw    $s1, 8($sp)
-  lw    $s0, 4($sp)
-  lw    $ra, 0($sp)
-  addi  $sp, $sp, 20
+  # Function epilogue, restore registers and clean up stack.
+  lw    $s3, 16($sp)              # Restore $s3.
+  lw    $s2, 12($sp)              # Restore $s2.
+  lw    $s1, 8($sp)               # Restore $s1.
+  lw    $s0, 4($sp)               # Restore $s0.
+  lw    $ra, 0($sp)               # Restore $ra.
+  addi  $sp, $sp, 20              # Deallocate five slots from the stack.
 
   # Return.
   jr    $ra
