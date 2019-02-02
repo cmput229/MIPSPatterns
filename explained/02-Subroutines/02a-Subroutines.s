@@ -1,8 +1,8 @@
-#------------------------------
+#-----------------------------------
 # Common MIPS Patterns - Subroutines
 # Author: Braedy Kuzma
 # Date: January 31, 2019
-#------------------------------
+#-----------------------------------
 .text
 
 # Subroutines, also called procedures or functions, are started at labels and

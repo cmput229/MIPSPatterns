@@ -1,8 +1,8 @@
-#------------------------------
+#------------------------------------------
 # Common MIPS Patterns - Postcondition Loop
 # Author: Braedy Kuzma
 # Date: January 31, 2019
-#------------------------------
+#------------------------------------------
 .text
 
 # A function with a postconditioned loop in it.

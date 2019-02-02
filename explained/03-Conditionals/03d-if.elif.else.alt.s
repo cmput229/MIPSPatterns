@@ -1,8 +1,8 @@
-#------------------------------
+#----------------------------------------------
 # Common MIPS Patterns - Alternate If/Elif/Else
 # Author: Braedy Kuzma
 # Date: January 31, 2019
-#------------------------------
+#----------------------------------------------
 .text
 
 # A function with a different style of if/elif/else in it.

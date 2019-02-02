@@ -1,8 +1,8 @@
-#------------------------------
+#-------------------------------
 # Common MIPS Patterns - If/Else
 # Author: Braedy Kuzma
 # Date: January 31, 2019
-#------------------------------
+#-------------------------------
 .text
 
 # A function with an if/else conditional in it.

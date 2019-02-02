@@ -1,8 +1,8 @@
-#------------------------------
+#-------------------------------------------
 # Common MIPS Patterns - Labels and Sections
 # Author: Braedy Kuzma
 # Date: January 31, 2019
-#------------------------------
+#-------------------------------------------
 
 # There are two types of sections you need to be familiar with in MIPS. The
 # first is the data section and the other is the text section. The data section
