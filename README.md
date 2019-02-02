@@ -99,11 +99,24 @@ The content is divided up as follows:
   </li>
   <li>
     <a href="explained/01-SyntaxAndStructure" name="stack">Stack</a>: Discusses
-    how to interact with the stack.
+    how to interact with the stack. This topic can be more difficult than
+    previous sections.
     <ol type="a">
       <li>
-        Single Stack Unwind: Discusses how to simplify your code with a single
-        exit point.
+        Saved Register Calling Convention: Introduces how to manage saved
+        registers in a subroutine.
+      </li>
+      <li>
+        Return Address Calling Convention: Introduces how to manage the return
+        address register when a subroutine calls other subroutines.
+      </li>
+      <li>
+        Temporary Register Calling Convention: Introduces how to manage
+        temporary registers that are live across subroutine calls.
+      </li>
+      <li>
+        Single Stack Unwind: Introduces a method to simplify subroutine code
+        by using a single exit point.
       </li>
     </ol>
   </li>
