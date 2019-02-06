@@ -3,6 +3,12 @@
 # Author: Braedy Kuzma
 # Date: January 31, 2019
 #----------------------------------------------
+# Copyright 2019 Braedy Kuzma
+#
+# Licensed under the Apache License, Version 2.0
+# You may obtain a copy of the License at
+# http://www.apache.org/licenses/LICENSE-2.0
+#----------------------------------------------
 .text
 
 # A function with a different style of if/elif/else in it.
