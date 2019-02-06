@@ -9,7 +9,8 @@ explanations that allow them to combine the different structures and eventually
 extend them to solve more subtle problems.
 
 In this way, these files are meant to be _suggestions_ or _aids_, ___not___
-rules and laws. This is not the only way to solve your problems.
+rules and laws. This is not the only way to solve your problems but it can help
+you get started.
 
 Each file has two versions, one in `explained/` and another in `simplified/`.
 The version in `explained/` contains explanation and descriptions of why and how
