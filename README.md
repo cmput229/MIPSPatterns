@@ -40,7 +40,7 @@ The content is divided up as follows:
   </li>
   <li>
     <a href="explained/01-SyntaxAndStructure">Subroutines</a>: Discusses how to
-    interact with _basic_ subroutines (leaf functions).
+    interact with <em>basic</em> subroutines (leaf functions).
     <ol type="a">
       <li>
         Subroutines: Introduces basic leaf functions. More advanced functions
