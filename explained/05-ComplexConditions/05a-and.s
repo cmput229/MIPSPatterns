@@ -39,7 +39,7 @@ f1:
 
   # If we get here then that means the first condition is true which also means
   # we need to check the second condition. Set up for the second condition now.
-  # $t1 is free because we were the ones that were using it.
+  # Choose $t1, assuming that it's not being used previously.
   li    $t1, 5
 
   # Now check the condition. We want to fail and go to the join point if this
