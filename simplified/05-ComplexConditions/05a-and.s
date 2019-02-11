@@ -19,7 +19,7 @@ f1:
   # if ($t0 < 0 AND $t0 != 5) { ... }
 
   # $t0 < 0
-  bge   $t1, $zero, _f1Join       # Branch to join on fail.
+  bge   $t0, $zero, _f1Join       # Branch to join on fail.
 
   # $t0 != 5
   li    $t1, 5                    # Load 5.

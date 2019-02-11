@@ -35,7 +35,7 @@ f1:
   # we can. That means if we FAIL the case, then we can skip to the join point.
   # Failing the case here means that t1 >= 0. Given this, we want to BRANCH if
   # we are GREATER than or EQUAL to (bge).
-  bge   $t1, $zero, _f1Join
+  bge   $t0, $zero, _f1Join
 
   # If we get here then that means the first condition is true which also means
   # we need to check the second condition. Set up for the second condition now.
