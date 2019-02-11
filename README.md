@@ -40,7 +40,7 @@ The content is divided up as follows:
     </ol>
   </li>
   <li>
-    <a href="explained/01-SyntaxAndStructure">Subroutines</a>: Discusses how to
+    <a href="explained/02-Subroutines">Subroutines</a>: Discusses how to
     interact with <em>basic</em> subroutines (leaf functions).
     <ol type="a">
       <li>
@@ -53,7 +53,7 @@ The content is divided up as follows:
     </ol>
   </li>
   <li>
-    <a href="explained/01-SyntaxAndStructure">Conditionals</a>: Discusses how to
+    <a href="explained/03-Conditionals">Conditionals</a>: Discusses how to
     form basic conditional statements.
     <ol type="a">
       <li>
@@ -73,7 +73,7 @@ The content is divided up as follows:
     </ol>
   </li>
   <li>
-    <a href="explained/01-SyntaxAndStructure">Loops</a>: Discusses how to form
+    <a href="explained/04-Loops">Loops</a>: Discusses how to form
     basic loop statements.
     <ol type="a">
       <li>
@@ -87,7 +87,7 @@ The content is divided up as follows:
     </ol>
   </li>
   <li>
-    <a href="explained/01-SyntaxAndStructure">Complex</a>: Discusses how to form
+    <a href="explained/05-ComplexConditions">Complex Conditions</a>: Discusses how to form
     composite conditions.
     <ol type="a">
       <li>
@@ -99,7 +99,7 @@ The content is divided up as follows:
     </ol>
   </li>
   <li>
-    <a href="explained/01-SyntaxAndStructure" name="stack">Stack</a>: Discusses
+    <a href="explained/06-Stack" name="stack">Stack</a>: Discusses
     how to interact with the stack. This topic can be more difficult than
     previous sections.
     <ol type="a">
