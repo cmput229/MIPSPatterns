@@ -37,9 +37,9 @@ f1:
   # function returns.
 
   # The first thing we need to do is allocate space on the stack. We manage the
-  # stack via the stack point ($sp). The stack pointer is a HIGH value. When the
-  # stack grows (allocating more space on the stack) we DECREASE the point. This
-  # means the stack grows DOWNWARDS.
+  # stack via the stack pointer ($sp). The stack pointer is a HIGH value. When
+  # the stack grows (allocating more space on the stack) we DECREASE the
+  # pointer. This means the stack grows DOWNWARDS.
 
   # We plan on using registers $s0-$s2.
   # That is 3 registers * 4 bytes which means 12 bytes.
