@@ -121,6 +121,22 @@ The content is divided up as follows:
       </li>
     </ol>
   </li>
+  <li>
+    <a href="explained/07-Kernel" name="stack">Kernel</a>: Discusses
+    how to act as the kernel. This topic can be more difficult than previous
+    sections as well.
+    <ol type="a">
+      <li>
+        Sections: Introduces the new sections used when acting as the kernel.
+      </li>
+      <li>
+        \_\_start: Introduces the \_\_start label and how to use it.
+      </li>
+      <li>
+        Register Saving: Introduces how to save registers in the kernel.
+      </li>
+    </ol>
+  </li>
 </ol>
 
 # Contributors
