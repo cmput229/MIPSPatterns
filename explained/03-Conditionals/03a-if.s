@@ -30,8 +30,8 @@ f1:
 
   # Therefore we can take our idea of "If $t0 == 0, do this" and change it to
   # "If $t0 != 0, don't do this". Don't do this means BRANCH around the code
-  # we want to skip. We want to branch when $t0 is NOT EQUAL to 0. Conveniently
-  # There is a BRANCH NOT EQUAL instruction: bne.
+  # we want to skip. We want to branch when $t0 is NOT EQUAL to 0. Conveniently,
+  # there is a BRANCH NOT EQUAL instruction: bne.
 
   # Recall that $zero or $0 always has the value of zero.
   bne   $t0, $zero, _f1Join

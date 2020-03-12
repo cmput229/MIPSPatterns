@@ -21,8 +21,8 @@ f2:
   # if ($t0 == 0) { ..do something if true.. }
   # else { ..do something if false.. }
 
-  # The idea remains basically the same as above, use the opposite condition to
-  # skip code we don't want to do. The difference is that if we fail the
+  # The idea remains basically the same as in 03a-if, use the opposite condition
+  # to skip code we don't want to do. The difference is that if we fail the
   # condition we jump to the else block instead and then both blocks are
   # directed to the join point.
   bne   $t0, $zero, _f2Else
@@ -41,7 +41,7 @@ _f2Else:
   # Else block.
   # ...
 
-  # Just like before, because we're right above the join point we can fall
+  # Just like in 03a-if, because we're right above the join point we can fall
   # through in the join code.
 
 _f2Join:
