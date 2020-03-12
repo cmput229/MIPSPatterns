@@ -17,16 +17,23 @@ f2:
   # ...
 
   # This loop has a post condition, a condition that's calculated at the end of
-  # every iteration. This is a bit more difficult to think about but this is
-  # often what a compile will actuall transform your loop into. This form is a
-  # bit more complicated because you still need to check initially if conditions
-  # are met (like an if) but then rely on the condition at the end to finish the
-  # loop.
+  # every iteration. It's is a bit more difficult to think about but is often
+  # what a compiler will actually transform a high level language loop into.
+  # This form is a bit more complicated because you still need to check
+  # initially (called a "guard") if conditions are met (like an if) but then
+  # you must rely on another condition at the end to terminate the loop.
 
   # We're going to set up the same loop as last time. THIS IS SECTION 1.
   # Assume $t0 and $t1 are free here.
   move  $t0, $zero
   li    $t1, 10
+
+  # We're just going to set up the same simple loop as in 04a-PreconditionLoop:
+  # for (i = 0; i < 10; ++i) { ... }
+  #      ----- +++++++ ****   ^^^^^
+  #        1      2      3      4
+  # The above also underlines some sections so that we can point them out in the
+  # code.
 
   # Our initial check. It's trivial to see here that this branch will never be
   # taken because we just set it up. However, if these were values that were
@@ -39,13 +46,14 @@ f2:
 
 _f2LoopBegin:
 
-  # The same note as above about saving your t-registers applies here.
+  # The same note as in 04a-PreconditionLoop about saving your registers applies
+  # here.
 
   # Do your loop work here. THIS IS SECTION 4.
   # ...
 
   # Now do our increment step. THIS IS SECTION 3.
-  # The same note as above about while loops applies here too.
+  # The same note as in 04a-PreconditionLoop about while loops applies here too.
   addi  $t0, $t0, 1
 
 
