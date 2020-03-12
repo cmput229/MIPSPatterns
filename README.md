@@ -130,7 +130,7 @@ The content is divided up as follows:
         Sections: Introduces the new sections used when acting as the kernel.
       </li>
       <li>
-        \_\_start: Introduces the \_\_start label and how to use it.
+        __start: Introduces the __start label and how to use it.
       </li>
       <li>
         Register Saving: Introduces how to save registers in the kernel.
