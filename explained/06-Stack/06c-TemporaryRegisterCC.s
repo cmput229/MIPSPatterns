@@ -29,8 +29,8 @@ f1:
   # is "live across a subroutine call".
 
   # Calling convention says that temporary registers can be used by a called
-  # subrouine (i.e. we are the CALLEE) without worrying about what value was in
-  # it previously. However, when we are the CALLER we need to save temporary
+  # subroutine (i.e. if we are the CALLEE) without worrying about what value was
+  # in it previously. However, when we are the CALLER we need to save temporary
   # registers that we still need. This is why we sometimes call temporary
   # registers "caller saved" registers.
 
