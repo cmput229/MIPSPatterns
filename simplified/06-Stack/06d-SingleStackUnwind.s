@@ -12,6 +12,7 @@
 .text
 
 # A function with multiple return values but one exit point.
+# This is a more advanced topic.
 f1:
   # Function prologue, set up stack and save registers.
   addi  $sp, $sp, -20             # Allocate five slots on stack.
