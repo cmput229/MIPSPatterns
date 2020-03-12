@@ -42,7 +42,7 @@ f4:
   # We'll assume that $t1 is free for use right now and put 1 into it.
   li    $t1, 1
 
-  # As in f2, jump around code that we don't want to execute.
+  # As in 03b-if.else, jump around code that we don't want to execute.
   bne   $t0, $t1, _f4Cond2
 
   # We passed if condition one, do the then block.
