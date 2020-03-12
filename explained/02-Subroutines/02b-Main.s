@@ -11,15 +11,15 @@
 #----------------------------
 
 # If you are creating a program, not just a function, then you need what is
-# called a program entry point. In C we call this main: in MIPS it is the same.
+# called a program entry point. In C we call this main; in MIPS it is the same.
 # The main function itself is actually just a subroutine that is called by
-# start up code.
+# start up code (discussed in 07b-__start).
 
 # Main must be in a text section since it is code.
 .text
 
 # It's now as simple as putting a label called main. Your program will then
-# start from this label (after a bit of behind the scenes set up).
+# start from this label (after a bit of set up behind the scenes).
 main:
   # Main code.
   # ...
