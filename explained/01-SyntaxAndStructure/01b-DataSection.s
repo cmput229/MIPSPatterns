@@ -10,8 +10,8 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #------------------------------------
 
-# The data section is used to allocate static space for variables. Here's a few
-# you might care about.
+# The data section is used to allocate static space for variables. Here are a
+# few you might care about.
 
 # This directive starts the data section.
 .data
@@ -33,14 +33,16 @@ aHalfword:
 manyHalfwords:
   .half 256, 0xFFFE, -19
 
-# Allocating space for a word (4 bytes, an int) uses the .word directive.
+# Allocating space for a word (4 bytes, an int, a pointer) uses the .word
+# directive.
 aWord:
   .word 4294967295
 
 manyWords:
   .word 65536, 0xDEADBEEF, -2147483648
 
-# Allocating space for a float (4 bytes, IEEE float) uses the .float directive.
+# Allocating space for a float (4 bytes, IEEE 754 float) uses the .float
+# directive.
 aFloat:
   .float 1.0
 
