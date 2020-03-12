@@ -56,7 +56,6 @@ _f2LoopBegin:
   # The same note as in 04a-PreconditionLoop about while loops applies here too.
   addi  $t0, $t0, 1
 
-
   # Now check our condition. This is the POSTCONDITION. It will almost certainly
   # be the negation of the initial check. The reason being that we are trying to
   # check if we want to RESTART the loop, not if we want to END it. THIS IS
@@ -65,7 +64,7 @@ _f2LoopBegin:
   # every iteration, instead we can just fall-through to the join block when we
   # finish.
   # We want to keep doing the loop while the counter is less than 10. Therefore
-  # we want to BRANCH while #t0 is LESS THAN $t1 (blt). Note that blt is the
+  # we want to BRANCH while $t0 is LESS THAN $t1 (blt). Note that blt is the
   # negation of bge.
   blt   $t0, $t1, _f2LoopBegin
 
