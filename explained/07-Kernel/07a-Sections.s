@@ -1,3 +1,4 @@
+# This is an advanced topic.
 # Interacting with the kernel brings two new sections: .ktext and .kdata.
 
 # The kernel data section (.kdata) works exactly like the regular data section.

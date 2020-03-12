@@ -1,3 +1,14 @@
+# This is an advanced topic.
+# Similar to how calling convention works in the conventional text section, the
+# kernel must also save registers. There are two main differences:
+
+# 1. We cannot trust $sp so we cannot use the stack. This necessitates saving
+# values into the kdata section instead.
+
+# 2. In the kernel, only $k0 and $k1 can be used freely. ANY other register must
+# be saved before using it. This means that every register you are about to use
+# (except $k0 and $k1) must have a slot in static memory.
+
 # The .kdata section can be used to give us space to save registers we want to
 # use into.
 .kdata
@@ -8,16 +19,8 @@ rS5:
 rT3:
   .word 0
 
-# Similar to how calling convention works in the conventional text section, the
-# kernel must also save registers. There are two main differences:
-
-# 1. We cannot trust $sp so we cannot use the stack. This necessitates saving
-# values into the data section instead.
-
-# 2. In the kernel, only $k0 and $k1 can be used freely. ANY other register must
-# be saved before using it. This means that every register you are about to use
-# (except $k0 and $k1) must have a slot in .ktext.
-.ktext
+# Kernel code.
+.ktext 0x80000180
   # The first register you must always consider saving is $at. The $at register
   # is the Assembler Temporary register and is used as an intermediate holding
   # place when performing pseudo instructions. For example:
