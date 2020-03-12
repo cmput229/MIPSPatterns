@@ -23,7 +23,6 @@ f1:
 
   # Fall through to join block.
 
-# Join point: after the conditional.
 _f1Join:
   # Code after the conditional.
   # ...
