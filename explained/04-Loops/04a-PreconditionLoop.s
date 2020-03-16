@@ -32,8 +32,8 @@ f1:
   # two registers.
 
   # These registers may have been filled by previous code but we're just going
-  # to assume that we want to make a loop do something ten times and set one
-  # register to zero and then other to ten. THIS IS SECTION 1.
+  # to assume that we want to make a loop do something ten times and so set one
+  # register to zero and the other to ten. THIS IS SECTION 1.
   # Assume $t0 and $t1 are free here.
   move  $t0, $zero
   li    $t1, 10
@@ -52,8 +52,9 @@ _f1LoopBegin:
   # make any calls (jal) you should be aware that calling convention allows
   # those registers to be trampled. You must save t-registers before the call
   # and restore them after. If you'd prefer to use s-registers then you must
-  # save and restore them at the beginning and end of your function.
-  # respectively
+  # save and restore them at the beginning and end of your function
+  # respectively. For an explanation of why this needs to be done and how to do
+  # it see 06a-SavedRegisterCC and 06c-TemporaryRegisterCC.
 
   # Do your loop work here. THIS IS SECTION 4.
   # ...
@@ -64,8 +65,9 @@ _f1LoopBegin:
   # just a part of your loop body.
   addi  $t0, $t0, 1
 
-  # We've finished this iteration so we need to start the iteration over again.
-  # This means unconditionally jumping back to checking our condition.
+  # We've finished this iteration so we need to return to the start for the next
+  # iteration. This means unconditionally jumping back to checking our
+  # condition.
   j     _f1LoopBegin
 
 _f1Join:

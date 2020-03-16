@@ -1,10 +1,11 @@
+# This is an advanced topic.
 # The __start label goes in .text NOT .ktext.
 .text
 
-# The "main" routine is typically thought as the entry point for a program. In
-# reality this is not true. Programs actually start at a label called __start.
-# This is true of languages like C as well, where the standard library provides
-# setup code in __start which eventually calls main.
+# The "main" routine is typically thought of as the entry point for a program.
+# In reality this is not true. Programs actually start at a label called
+# __start. This is true of languages like C as well, where the standard library
+# provides setup code in __start which eventually calls main.
 
 # Normally, SPIM's exception.s has an __start in it that calls main. If you are
 # writing your own exception handler by using -notrap, then you'll need to
@@ -22,7 +23,7 @@ __start:
   jal   main
 
   # This is the "top level" code in the program so using "jr $ra" doesn't make
-  # sense because nothing called us. Instead we use the syscall to exit the
+  # sense because nothing called us. Instead we use a syscall to exit the
   # program.
   li $v0 10
   syscall

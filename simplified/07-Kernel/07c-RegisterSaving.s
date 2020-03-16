@@ -30,6 +30,6 @@ rT3:
   lw    $k0, rAT                  # Load $at
   .set  noat                      # Unprotect $at.
   move $at, $k0                   # Overwrite $at.
-  .set at                         # Reprotect $at.\
+  .set at                         # Reprotect $at.
 
   eret                            # Return from exception handler.

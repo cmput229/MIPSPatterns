@@ -19,7 +19,9 @@ f1:
   # place a return address in the $ra register. However, we only have a SINGLE
   # $ra register. Right now, $ra has OUR return address in it, so if we use jal
   # and overwrite it, we'll never be able to return. So WE need to save it. In
-  # this way, $ra is ALSO a saved register.
+  # this way, $ra is ALSO a saved register. Technically, $ra isn't a saved
+  # register but treating it like one for calling convention's sake will make
+  # your life easy.
 
   # We save this register the same way we'd save another saved register: save
   # it at the start of the function on the stack and then restore it just before

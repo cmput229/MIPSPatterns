@@ -18,8 +18,9 @@ f2:
 
   # We'll try an OR (||) now.
   # Let's check: if ($t0 % 3 == 0 OR $t0 % 5 == 0) { ... }
-  # If either boolean is true then the body WILL BE executed. This is still
-  # called short circuiting.
+  # Like with AND, ORs short circuit as well, but in a different way. Here, ANY
+  # true value means that the body will be executed. So, evaluating left to
+  # right we can jump to the body to execute it if a condition is true.
 
   # Set up for the first part of the condition.
   # Assume $t1 is available for use here. Remainder can be obtained from the div
@@ -30,7 +31,10 @@ f2:
 
   # Now check the condition. We want to execute the body if the remainder is
   # zero, so, we want to BRANCH if $t1 EQUALS 0. We branch straight to the body,
-  # there's no need to look at the other condition.
+  # there's no need to look at the other condition. This is different than
+  # almost any condition we've seen until now because we're doing the same thing
+  # as the original condition. This is because short circuiting says that we
+  # WANT to do the body.
   beq   $t1, $zero, _f2CondBody
 
   # The first part was not true, so we need to check the next part.
@@ -40,11 +44,12 @@ f2:
   div   $t0, $t1
   mfhi  $t1
 
-  # Now check the condition. The difference here is that if we fail here then we
+  # Now check the last condition. The difference between the last condition and
+  # any previous condition in the conditional is that if we fail here then we
   # SHOULD NOT execute the body. This is the classic do-the-opposite-of-what-we-
-  # wrote. We want to BRANCH if $t1 DOES NOT equal 0. We branch to the join
-  # because we failed every condition or fall through because we pass this one
-  # ($t1 == 0)
+  # wrote again. We want to BRANCH if $t1 DOES NOT equal 0. We branch to the
+  # join because we failed every condition or fall through because we pass this
+  # one.
   bne   $t1, $zero, _f2Join
 
 _f2CondBody:

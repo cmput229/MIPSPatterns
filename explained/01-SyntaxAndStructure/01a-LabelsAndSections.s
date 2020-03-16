@@ -30,11 +30,12 @@
 # when considering style so that we can see the section changes quickly.
 .data
 
-# This is a label. Labels are a single string without whitespace beginning
-# followed by a colon. They can be indented but typically are not. This label
-# will be the address of a single statically allocated byte (discussed later).
-# Labels need not be alone on their line therefore either of these is acceptable
-# code.
+# This is a label. Labels are strings composed of letters, numbers, and
+# underscores. They must also start with a letter or an underscore and not an
+# underscore. They can be indented but typically are not. This label is the
+# address of a single statically allocated byte (discussed in 01b-DataSection).
+# Labels need not be alone on their line and therefore either of these are
+# acceptable code.
 exampleLabel1:
   .space 1
 

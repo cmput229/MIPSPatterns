@@ -31,17 +31,18 @@ f4:
   #   else { bdy3 }
   # }
 
-  # This means that we can take conditionals as in f2 and nest them to achieve
-  # the same funtionality as f3. All we need to do is have the body of the else
-  # be the next conditional. Of course, we can be cleaner than just duplicating
-  # code so the result is a bit better than this, but this is the general idea.
+  # This means that we can take conditionals as in 03b-if.else and nest them to
+  # achieve the same funtionality as 03c-if.elif.else. All we need to do is have
+  # the body of the else be the next conditional. Of course, we can be cleaner
+  # than just duplicating code so the result is a bit better than this, but this
+  # is the general idea.
 
   # Setup for your first condition test here. In this case we want to check if
   # $t0 == 1 so we can set up in one instruction.
   # We'll assume that $t1 is free for use right now and put 1 into it.
   li    $t1, 1
 
-  # As in f2, jump around code that we don't want to execute.
+  # As in 03b-if.else, jump around code that we don't want to execute.
   bne   $t0, $t1, _f4Cond2
 
   # We passed if condition one, do the then block.

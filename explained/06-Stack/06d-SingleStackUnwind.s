@@ -12,6 +12,7 @@
 .text
 
 # A function with multiple return values but one exit point.
+# This is a more advanced topic.
 f1:
   # Function prologue, set up stack and save registers.
   addi  $sp, $sp, -20             # Allocate five slots on stack.
@@ -32,14 +33,19 @@ f1:
   # exactly this. Do your decision making that sends you to the correct block;
   # execute code in the block; setup your return value in $v0 and $v1; unwind
   # your stack; and finally return. This is a lot of duplicated code and a lot
-  # of points of failure when returning. The first parts are unavoidable: you'll
-  # need to execute the code and setup the return value no matter what. However,
-  # if you're managing the stack winding in one place, wouldn't it be nice to
-  # unwind in one place as well? This way, if you save more registers or change
-  # your stack wind, you only need to maintain one place for unwinding.
+  # of points of failure becuase you need to unwind your stack and return in each
+  # conditional body. The first parts are unavoidable: you'll need to execute
+  # the code and setup the return value no matter what. However, if you're
+  # managing the stack winding in one place, wouldn't it be nice to unwind in
+  # one place as well? If you do it this way, when decide to change your saved
+  # registers (add or remove) or change your stack wind in some way, then you
+  # only need to maintain one place for unwinding.
 
   # Complicated decision making
   # ...
+
+  # Now, within any of the conditional bodies, jump to a common shared unwind
+  # location where everything is cleaned up.
 
 _f1Body1:
   # Result code that sets up the return values for the first case.
@@ -57,7 +63,7 @@ _f1Body3:
   # Result code that sets up the return values for the third case.
   # ...
 
-  # Now, since the next instructions are my clean up, we can just fall through.
+  # Now, since the next instructions are the clean up, we can just fall through.
 
 _unwind:
   # Any code here is ONLY for cleaning up the stack since we don't want to

@@ -24,8 +24,8 @@ f3:
   # else { ..do something.. }
 
   # There's two ways to do this in assembly. The first is easier to visualise
-  # and maintain. The second will be explained after but you only really need to
-  # know one.
+  # and maintain. The second will be explained in 03d-if.elif.else.alt but you
+  # only really need to know one.
 
   # The idea here is slightly different than before. We are going to gather all
   # of our conditions in one place (the top of the conditional) and then branch
@@ -52,12 +52,14 @@ f3:
   beq   $t0, $t1, _f3Body2
 
   # We're done all of our conditions. If we get here then we know that none of
-  # the if conditions were met. If there's an if block then we must execute it
+  # the if conditions were met. If there's an else block then we must execute it
   # by unconditionally jumping to it. If there is no else block (i.e. if/elif
   # without else) then we unconditionally jump to the join block.
 
   # We have an else block, so jump to it.
   j     _f3Else
+
+  # Or if there was no else block: j _f3Join
 
 _f3Body1:
   # We passed if condition one, do if then block.
