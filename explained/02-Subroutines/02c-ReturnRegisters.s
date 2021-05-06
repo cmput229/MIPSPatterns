@@ -19,7 +19,7 @@ sumAndSquare:
   # data (though it can be composed of many things), MIPS has two return
   # registers instead, allowing for two pieces of data to be returned, though
   # they're still limited to the register size (a word). These are often used
-  # for data ($v0) and then an "info" register ($v0). This info could be a
+  # for data ($v0) and then an "info" register ($v1). This info could be a
   # boolean indicating success or a length of written bytes. In truth though,
   # it is up to you to decide their meanings when you write the functions.
 
