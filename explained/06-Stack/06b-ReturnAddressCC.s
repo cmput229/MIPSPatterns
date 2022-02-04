@@ -44,7 +44,7 @@ f1:
   # ...
 
   # Now we restore $ra just before returning.
-  lw    $ra, 0($s0)
+  lw    $ra, 0($sp)
 
   # Deallocate stack space.
   addi  $sp, $sp, 4

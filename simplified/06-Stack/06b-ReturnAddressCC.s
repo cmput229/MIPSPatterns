@@ -27,7 +27,7 @@ f1:
   # ...
 
   # Function epilogue, restore return address and clean up stack.
-  lw    $ra, 0($s0)               # Restore $ra.
+  lw    $ra, 0($sp)               # Restore $ra.
   addi  $sp, $sp, 4               # Deallocate one slot from stack.
 
   jr    $ra                       # Return.
